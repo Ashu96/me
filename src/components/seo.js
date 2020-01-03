@@ -44,6 +44,10 @@ function SEO({ description, lang, meta, title }) {
           content: title,
         },
         {
+          property: `og:image`,
+          content: `https://avatars0.githubusercontent.com/u/13612227?s=460&v=4`
+        },
+        {
           property: `og:description`,
           content: metaDescription,
         },
@@ -66,6 +70,10 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          property: `twitter:image`,
+          content: `https://avatars0.githubusercontent.com/u/13612227?s=460&v=4`
         },
       ].concat(meta)}
     />
