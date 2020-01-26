@@ -17,7 +17,9 @@ const lightIcon = require("../images/contrast.svg")
 const Layout = ({ children }) => {
   const [isThemeDark, setIsThemeDark] = useState(true)
   const bgColor = isThemeDark ? "bg-gray-900" : "bg-gray-100"
-  const textColor = isThemeDark ? "text-gray-100" : "text-gray-900"
+  const textColor = isThemeDark ? "text-gray-100" : "text-gray-800"
+  // const borderColor = isThemeDark ? "border-gray-100" : "border-gray-800"
+  const footerBgColor = isThemeDark ? "bg-gray-800" : "bg-gray-200"
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -57,16 +59,18 @@ const Layout = ({ children }) => {
           </div>
         </div>
         <main>{children}</main>
-        <footer className="py-4 text-center font-body">
-          © {new Date().getFullYear()}, Built with Love using
-          {` `}
-          <a
-            className="text-purple-400 hover:text-purple-700"
-            href="https://www.gatsbyjs.org"
-          >
-            Gatsby
-          </a>
-          <p>
+        <footer className={`pt-8 pb-4 text-center font-body ${footerBgColor}`}>
+          <p className='mb-2'>
+            © {new Date().getFullYear()}, Built with Love using
+            {` `}
+            <a
+              className="text-purple-400 hover:text-purple-700"
+              href="https://www.gatsbyjs.org"
+            >
+              Gatsby
+            </a>
+          </p>
+          <p className='mb-2'>
             Icons made by{" "}
             <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
               Freepik
