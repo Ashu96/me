@@ -64,7 +64,7 @@ const IndexPage = () => (
               <li className="px-4">
                 <a
                   className="hover:text-purple-600 border-b border-white hover:border-purple-600"
-                  href="https://github.com/ashu96"
+                  href="https://www.linkedin.com/in/iamashutoshbhardwaj/"
                 >
                   LinkedIn
                 </a>
