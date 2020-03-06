@@ -18,14 +18,14 @@ const Image = props => {
     query {
       uprise: file(relativePath: { eq: "uprise-co.png" }) {
         childImageSharp {
-          fluid(maxWidth: 540) {
+          fluid(maxWidth: 1400) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       nykaa: file(relativePath: { eq: "nykaa-tv.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 540) {
+          fluid(maxWidth: 1400) {
             ...GatsbyImageSharpFluid
           }
         }
