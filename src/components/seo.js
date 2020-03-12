@@ -36,6 +36,10 @@ function SEO({ description, lang, meta, title }) {
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
+          name: "google-site-verification",
+          content: "5vd7F6h0MJsY14D9mccWruT3GEj8_j6WU7vo9kmGFnw",
+        },
+        {
           name: `description`,
           content: metaDescription,
         },
@@ -45,7 +49,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `https://avatars0.githubusercontent.com/u/13612227?s=460&v=4`
+          content: `https://avatars0.githubusercontent.com/u/13612227?s=460&v=4`,
         },
         {
           property: `og:description`,
@@ -73,7 +77,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `twitter:image`,
-          content: `https://avatars0.githubusercontent.com/u/13612227?s=460&v=4`
+          content: `https://avatars0.githubusercontent.com/u/13612227?s=460&v=4`,
         },
       ].concat(meta)}
     />
