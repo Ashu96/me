@@ -30,12 +30,31 @@ const Image = props => {
           }
         }
       }
+      react101: file(relativePath: { eq: "react101.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      learnGatsby: file(relativePath: { eq: "learnGatsby.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
   console.log({ Image: data })
   if (data[props.imageName]) {
-    return <Img fluid={data[props.imageName].childImageSharp.fluid} />
+    return (
+      <Img
+        fluid={data[props.imageName].childImageSharp.fluid}
+        className={`${props.isCourseImage ? "h-48" : ""}`}
+      />
+    )
   }
   return null
 }

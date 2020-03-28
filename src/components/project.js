@@ -3,13 +3,23 @@ import PropTypes from "prop-types"
 import Image from "./image"
 
 export default function Project(props) {
-  const className = props.id % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+  const imageOnLeft = props.id % 2 === 0
+  const className = imageOnLeft ? "lg:flex-row" : "lg:flex-row-reverse"
   return (
-    <div className={`mt-10 lg:mt-16 xl:mt-20 flex flex-col ${className}`}>
-      <div className="w-full lg:w-1/2">
+    <div
+      className={`mt-12 lg:mt-16 xl:mt-20 flex flex-col ${className}`}
+      onClick={() => window.open(props.link)}
+    >
+      <div className="w-full lg:w-7/12 transition duration-200 ease-in transform hover:-translate-y-3 hover:scale-105 shadow-lg">
         <Image imageName={props.imageName} />
       </div>
-      <div className="w-full lg:w-1/2 mt-8 lg:mt-0 lg:px-8 lg:py-2 xl:px-12 xl:self-center">
+      <div
+        className={`w-full lg:w-5/12 mt-8 lg:mt-0 lg:px-8 ${
+          imageOnLeft ? "lg:pr-0" : "lg:pl-0"
+        } lg:py-2 xl:px-12 ${
+          imageOnLeft ? "xl:pr-0" : "xl:pl-0"
+        } xl:self-center`}
+      >
         <a
           href={props.link}
           target="_blank"

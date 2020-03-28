@@ -14,6 +14,8 @@ import "./toggle.css"
 const nightIcon = require("../images/moon.svg")
 const lightIcon = require("../images/contrast.svg")
 
+export const ThemeContext = React.createContext({ isThemeDark: true });
+
 const Layout = ({ children }) => {
   const [isThemeDark, setIsThemeDark] = useState(true)
   const bgColor = isThemeDark ? "bg-gray-900" : "bg-gray-100"
@@ -33,7 +35,7 @@ const Layout = ({ children }) => {
   console.log({ data })
 
   return (
-    <>
+    <ThemeContext.Provider value={{ isThemeDark }}>
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
       <div className={`${bgColor} ${textColor}`}>
         <div className="absolute top-0 right-0 flex items-center mt-4 mr-4 py-2">
@@ -58,7 +60,7 @@ const Layout = ({ children }) => {
             />
           </div>
         </div>
-        <main>{children}</main>
+        <main className='container mx-auto'>{children}</main>
         <footer className={`pt-8 pb-4 text-center font-body ${footerBgColor}`}>
           <p className='mb-2'>
             © {new Date().getFullYear()}, Built with Love using
@@ -83,7 +85,7 @@ const Layout = ({ children }) => {
           </p>
         </footer>
       </div>
-    </>
+    </ThemeContext.Provider>
   )
 }
 
