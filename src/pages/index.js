@@ -95,7 +95,7 @@ const IndexPage = () => (
       </div>
       {/* Introduction end */}
       <div className="border-b-2 border-purple-400"></div>
-      <section class="my-12">
+      <section className="my-12">
         <h2 className="mb-4 text-green-400 text-2xl lg:text-3xl font-display">Projects</h2>
         <p className="mb-8 text-lg font-body">
           Take a look at the projects that I worked on

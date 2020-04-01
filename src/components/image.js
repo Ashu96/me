@@ -47,7 +47,6 @@ const Image = props => {
     }
   `)
 
-  console.log({ Image: data })
   if (data[props.imageName]) {
     return (
       <Img

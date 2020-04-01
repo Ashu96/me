@@ -32,7 +32,6 @@ const Layout = ({ children }) => {
       }
     }
   `)
-  console.log({ data })
 
   return (
     <ThemeContext.Provider value={{ isThemeDark }}>
