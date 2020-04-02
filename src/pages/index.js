@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Project from "../components/project"
 import SEO from "../components/seo"
 import CourseCard from "../components/CourseCard"
+import Path from '../components/Path'
 
 const PROJECTS = [
   {
@@ -51,11 +52,15 @@ const IndexPage = () => (
     <SEO title="Home" />
     <div className="w-full min-h-screen mb-10 p-10 md:px-20 md:pt-16">
       <div className="font-body">
-        <h3 className="mb-12 text-2xl text-green-400 font-display">Ashutosh</h3>
-        <h1 className="mb-12 text-5xl font-display">
+        <h3 className="mb-12 text-3xl text-green-400 font-display">Ashutosh</h3>
+        <div className='relative'>
+        <Path classNames='absolute top-0 left-0 w-full max-w-sm path'/>    
+        <h1 className="relative z-10 mb-12 text-5xl lg:text-6xl font-display">
           I build <br /> <span className="text-purple-400">applications</span>{" "}
           <br /> for web
         </h1>
+
+        </div>
         <div className="border-b-2 border-purple-400"></div>
       </div>
       {/* Introduction start */}
