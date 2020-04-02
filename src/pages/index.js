@@ -42,7 +42,7 @@ const COURSES = [
     subTitle: "Build your own blazing fast blog website with Gatsby",
     imageName: "learnGatsby",
     link:
-      "https://www.udemy.com/course/draft/2897800/?referralCode=8B143CA46C642232250F",
+      "https://www.udemy.com/course/learn-gatsby-and-build-website/?referralCode=8B143CA46C642232250F",
   },
 ]
 
