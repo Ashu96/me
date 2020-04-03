@@ -49,7 +49,7 @@ const COURSES = [
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Ashutosh | Full stack developer" />
     <div className="w-full min-h-screen mb-10 p-10 md:px-20 md:pt-16">
       <div className="font-body">
         <h3 className="mb-12 text-3xl text-green-400 font-display">Ashutosh</h3>

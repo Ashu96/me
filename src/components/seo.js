@@ -49,7 +49,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `https://avatars0.githubusercontent.com/u/13612227?s=460&v=4`,
+          content: `https://drive.google.com/file/d/1qUJU3gHLT-vW-G6rW-XJctw1MWFO-ENR/view?usp=sharing`,
         },
         {
           property: `og:description`,
@@ -77,7 +77,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `twitter:image`,
-          content: `https://avatars0.githubusercontent.com/u/13612227?s=460&v=4`,
+          content: `https://drive.google.com/file/d/1qUJU3gHLT-vW-G6rW-XJctw1MWFO-ENR/view?usp=sharing`,
         },
       ].concat(meta)}
     />
