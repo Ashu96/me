@@ -1,9 +1,9 @@
 import React from "react";
 // import { Link } from "gatsby"
 import { motion } from "framer-motion";
-import Layout from "../components/layout";
-import Project from "../components/project";
-import SEO from "../components/seo";
+import Layout from "../components/Layout";
+import Project from "../components/Project";
+import SEO from "../components/Seo";
 import CourseCard from "../components/CourseCard";
 import Path from "../components/Path";
 
@@ -127,7 +127,10 @@ const Divider = () => {
 const IndexPage = () => {
     return (
         <Layout>
-            <SEO title="Ashutosh | Full stack developer" />
+            <SEO
+                title="Ashutosh | Full stack developer"
+                description={"Hi there! My name is Ashutosh and I'm a Full Stack developer."}
+            />
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, transition: { ease: "easeInOut", duration: 1 } }}
