@@ -13,7 +13,7 @@ export default function CourseCard({ title, subTitle, imageName, link }) {
       onClick={() => window.open(link)}
     >
       <Image imageName={imageName}  isCourseImage={true}/>
-      <div class="p-6">
+      <div className="p-6">
         <h2
           className={`h-12 ${
             isThemeDark ? "text-purple-400" : "text-purple-600"
