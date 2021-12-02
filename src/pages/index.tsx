@@ -48,63 +48,27 @@ const COURSES = [
 ];
 
 const Introduction = () => {
-    const list = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.3,
-                when: "beforeChildren"
-            }
-        }
-    };
-    const item = {
-        hidden: {
-            x: -10,
-            opacity: 0
-        },
-        visible: {
-            x: 10,
-            opacity: 1
-        }
-    };
     return (
         <div className="my-12 md:flex font-body">
             <div className="w-full md:w-1/2 py-2 md:px-4">
                 <p className=" text-xl font-display">
-                    A software engineer based in India who enjoys building websites and
-                    applications.
+                    A software engineer based in India who enjoys building web applications.
                 </p>
             </div>
             <div className="w-full md:w-1/2 py-2 md:px-4">
                 <p className="mb-4">
-                    See bits and pieces on GitHub, packages on npm, thoughts on Medium, and a full
-                    resume on LinkedIn
+                    See my work on&nbsp;
+                    <a className="hover:text-purple-600 font-bold" href="https://github.com/ashu96">
+                        Github
+                    </a>
+                    &nbsp; and a full resume on{" "}
+                    <a
+                        className="hover:text-purple-600 font-bold"
+                        href="https://www.linkedin.com/in/iamashutoshbhardwaj/"
+                    >
+                        LinkedIn
+                    </a>
                 </p>
-                <motion.ul
-                    initial={"hidden"}
-                    animate={"visible"}
-                    variants={list}
-                    transition={{ ease: "easeOut", duration: 1, delay: 1 }}
-                    className="mb-0 flex ml-0"
-                >
-                    <motion.li variants={item} className="pr-4">
-                        <motion.a
-                            className="hover:text-purple-600 border-b border-gray-800 dark:border-gray-50 hover:border-purple-600"
-                            href="https://github.com/ashu96"
-                        >
-                            Github
-                        </motion.a>
-                    </motion.li>
-                    <motion.li variants={item} className="px-4">
-                        <motion.a
-                            className="hover:text-purple-600 border-b border-gray-800 dark:border-gray-50 hover:border-purple-600"
-                            href="https://www.linkedin.com/in/iamashutoshbhardwaj/"
-                        >
-                            LinkedIn
-                        </motion.a>
-                    </motion.li>
-                </motion.ul>
             </div>
         </div>
     );
