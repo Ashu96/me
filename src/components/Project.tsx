@@ -15,7 +15,7 @@ const Project: React.FC<ProjectParams> = props => {
     const className = imageOnLeft ? "lg:flex-row" : "lg:flex-row-reverse";
     return (
         <div
-            className={`mt-12 lg:mt-16 xl:mt-20 flex flex-col ${className}`}
+            className={`mt-12 lg:mt-16 xl:mt-24 flex flex-col ${className}`}
             onClick={() => window.open(props.link)}
         >
             <div className="w-full lg:w-7/12 transition duration-200 ease-in transform hover:-translate-y-3 hover:scale-105 shadow-lg">
