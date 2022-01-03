@@ -39,7 +39,7 @@ const Project: React.FC<ProjectParams> = props => {
                     {props.tags.map((tag, index) => (
                         <span
                             key={index}
-                            className="h-8 px-2 py-1 mr-2 mb-2 rounded-full shadow bg-purple-200 text-purple-800"
+                            className="h-8 px-2 py-1 mr-2 mb-2 rounded-full shadow bg-teal-100 text-teal-700 text-xs capitalize tracking-wider"
                         >
                             {tag}
                         </span>

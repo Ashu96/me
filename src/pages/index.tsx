@@ -9,11 +9,30 @@ import Path from "../components/Path";
 
 const PROJECTS = [
     {
+        id: -1,
+        name: "Webiny",
+        description:
+            "Webiny is a JavaScript serverless application framework with a built-in CMS." +
+            "Webiny exist specifically to help developers architect, build and deploy solutions on top of the serverless infrastructure, like AWS Lambda, DynamoDB, S3, and others.",
+        tags: [
+            "Javascript",
+            "Typescript",
+            "Gatsby",
+            "Reactjs",
+            "Nodejs",
+            "CSS-in-JS",
+            "Jest",
+            "Cypress"
+        ],
+        imageName: "webiny",
+        link: "https://webiny.com"
+    },
+    {
         id: 0,
         name: "Uprise",
         description:
             "Uprise is a proactive and science-based Employee Assistance Program (EAP) provider in Australia.",
-        tags: ["Gatsby", "Reactjs", "Storyblok", "Styled-components"],
+        tags: ["Javascript", "Gatsby", "Reactjs", "Storyblok", "Styled-components", "Nodejs"],
         imageName: "uprise",
         link: "https://uprise.co"
     },
@@ -22,7 +41,7 @@ const PROJECTS = [
         name: "Nykaa TV",
         description:
             "Buy cosmetics & beauty products online from Nykaa, the online shopping beauty store. Browse makeup, health products & more from top beauty brands. ✔ free shipping* ✔ Cash on Delivery",
-        tags: ["Reactjs", "scss"],
+        tags: ["Javascript", "Reactjs", "CSS", "Redux", "PWA"],
         imageName: "nykaa",
         link: "https://www.nykaa.com/nykaatv/"
     }
@@ -71,37 +90,55 @@ const Introduction = () => {
     return (
         <div className="my-12 md:flex font-body">
             <div className="w-full md:w-1/2 py-2 md:px-4">
-                <p className=" text-xl font-display">
-                    A software engineer based in India who enjoys building websites and
-                    applications.
+                <p className="text-lg leading-6">
+                    Apart from working full-time as <br />a full-stack&nbsp;
+                    <span className={"text-green-400 cap"}>software engineer</span>,
+                    <br />I write blogs and create YouTube videos
+                    <br /> about my learnings.
                 </p>
             </div>
             <div className="w-full md:w-1/2 py-2 md:px-4">
                 <p className="mb-4">
-                    See bits and pieces on GitHub, packages on npm, thoughts on Medium, and a full
-                    resume on LinkedIn
+                    See bits and pieces on GitHub, thoughts on Dev Community, and a full resume on
+                    LinkedIn.
                 </p>
                 <motion.ul
                     initial={"hidden"}
                     animate={"visible"}
                     variants={list}
                     transition={{ ease: "easeOut", duration: 1, delay: 1 }}
-                    className="mb-0 flex ml-0"
+                    className="-ml-2 mb-0 flex flex-col md:flex-row md:flex-wrap ml-0"
                 >
                     <motion.li variants={item} className="pr-4">
                         <motion.a
-                            className="hover:text-purple-600 border-b border-white hover:border-purple-600"
+                            className="hover:text-purple-600 border-b border-white border-purple-600"
                             href="https://github.com/ashu96"
                         >
                             Github
                         </motion.a>
                     </motion.li>
-                    <motion.li variants={item} className="px-4">
+                    <motion.li variants={item} className="px-0 md:px-4">
                         <motion.a
-                            className="hover:text-purple-600 border-b border-white hover:border-purple-600"
+                            className="hover:text-purple-600 border-b border-white border-purple-600"
                             href="https://www.linkedin.com/in/iamashutoshbhardwaj/"
                         >
                             LinkedIn
+                        </motion.a>
+                    </motion.li>
+                    <motion.li variants={item} className="px-0 md:px-4">
+                        <motion.a
+                            className="hover:text-purple-600 border-b border-white border-purple-600"
+                            href="https://dev.to/ashu96/"
+                        >
+                            Dev Community
+                        </motion.a>
+                    </motion.li>
+                    <motion.li variants={item} className="px-0 md:px-4">
+                        <motion.a
+                            className="hover:text-purple-600 border-b border-white border-purple-600"
+                            href="https://www.youtube.com/channel/UC4gxBgGH_-H_i7jXvGDn5kQ"
+                        >
+                            YouTube
                         </motion.a>
                     </motion.li>
                 </motion.ul>

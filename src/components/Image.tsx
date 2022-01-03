@@ -30,6 +30,13 @@ const Image: React.FC<{ imageName: string; isCourseImage: boolean }> = props => 
                     }
                 }
             }
+            webiny: file(relativePath: { eq: "webiny.jpg" }) {
+                childImageSharp {
+                    fluid(maxWidth: 1400) {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
             react101: file(relativePath: { eq: "react101.jpg" }) {
                 childImageSharp {
                     fluid(maxWidth: 1400) {
