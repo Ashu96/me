@@ -119,7 +119,7 @@ const Introduction = () => {
                     </motion.li>
                     <motion.li variants={item} className="px-0 md:px-4">
                         <motion.a
-                            className="hover:text-purple-600 border-b border-white border-purple-600"
+                            className="hover:text-purple-600 border-b border-gray-800 dark:border-gray-50 hover:border-purple-600"
                             href="https://www.linkedin.com/in/iamashutoshbhardwaj/"
                         >
                             LinkedIn
