@@ -20,7 +20,7 @@ interface SeoProps {
 function SEO(props: SeoProps) {
     const { description, lang = "en", meta = [], title } = props || {};
 
-    const { site } = useStaticQuery(
+    const { site, allFile } = useStaticQuery(
         graphql`
             query {
                 site {
@@ -30,10 +30,16 @@ function SEO(props: SeoProps) {
                         author
                     }
                 }
+                allFile(filter: {name: {eq: "ashutosh_profile_picture"}}) {
+                    nodes {
+                    publicURL
+                    name
+                    }
+                }
             }
         `
     );
-
+    const imageUrl = allFile?.nodes[0]?.publicURL;
     const metaDescription = description || site.siteMetadata.description;
 
     return (
@@ -58,7 +64,7 @@ function SEO(props: SeoProps) {
                 },
                 {
                     property: `og:image`,
-                    content: `https://drive.google.com/file/d/1qUJU3gHLT-vW-G6rW-XJctw1MWFO-ENR/view?usp=sharing`
+                    content: imageUrl
                 },
                 {
                     property: `og:description`,
@@ -86,7 +92,7 @@ function SEO(props: SeoProps) {
                 },
                 {
                     property: `twitter:image`,
-                    content: `https://drive.google.com/file/d/1qUJU3gHLT-vW-G6rW-XJctw1MWFO-ENR/view?usp=sharing`
+                    content: imageUrl
                 }
             ].concat(meta)}
         />
